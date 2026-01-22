@@ -18,8 +18,6 @@ fi
 
 # Generate skill list
 generate_skill_list() {
-  local skills_md=""
-  
   for skill_dir in "$SKILLS_DIR"/*/; do
     [ -d "$skill_dir" ] || continue
     
@@ -27,59 +25,53 @@ generate_skill_list() {
     skill_md="$skill_dir/SKILL.md"
     
     if [ -f "$skill_md" ]; then
-      # Extract frontmatter
+      # Extract name from frontmatter
       name=$(grep -E "^name:" "$skill_md" | head -1 | sed 's/name:[[:space:]]*//')
-      description=$(grep -E "^description:" "$skill_md" | head -1 | sed 's/description:[[:space:]]*//')
       
-      # If description spans multiple lines (using >), get next line
-      if [ -z "$description" ] || [ "$description" = ">" ]; then
-        description=$(awk '/^description:/{found=1; next} found && /^[[:space:]]+/{gsub(/^[[:space:]]+/, ""); print; exit}' "$skill_md")
-      fi
+      # Extract description - handle single line or multiline
+      description=$(sed -n '/^description:/,/^[a-z]*:/{ /^description:/{ s/description:[[:space:]]*//; s/^>//; p; }; /^[[:space:]]/{ s/^[[:space:]]*//; p; }; }' "$skill_md" | head -1 | tr -d '"')
       
       # Use folder name if no name in frontmatter
       [ -z "$name" ] && name="$skill_name"
       [ -z "$description" ] && description="No description"
       
-      skills_md+="- \`$name\`: $description"$'\n'
+      # Truncate long descriptions
+      if [ ${#description} -gt 120 ]; then
+        description="${description:0:117}..."
+      fi
+      
+      echo "- \`$name\`: $description"
     else
-      skills_md+="- \`$skill_name\`: *(missing SKILL.md)*"$'\n'
+      echo "- \`$skill_name\`: *(missing SKILL.md)*"
     fi
   done
-  
-  if [ -z "$skills_md" ]; then
-    echo "*No skills installed yet. Add skills to the \`/skills\` folder.*"
-  else
-    echo "$skills_md"
-  fi
 }
 
-# Update README between markers
-update_readme() {
+# Create new README content
+create_readme() {
   local skill_list
   skill_list=$(generate_skill_list)
   
-  # Create temp file
-  local tmp_file=$(mktemp)
-  
-  # Process README
-  awk -v skills="$skill_list" '
-    /<!-- SKILLS_START -->/ {
-      print
-      print skills
-      skip = 1
-      next
-    }
-    /<!-- SKILLS_END -->/ {
-      skip = 0
-    }
-    !skip {
-      print
-    }
-  ' "$README" > "$tmp_file"
-  
-  mv "$tmp_file" "$README"
-  echo "✓ Updated README.md with $(ls -1d "$SKILLS_DIR"/*/ 2>/dev/null | wc -l | tr -d ' ') skills"
+  # Read README and replace between markers
+  local in_skills=0
+  while IFS= read -r line; do
+    if [[ "$line" == "<!-- SKILLS_START -->" ]]; then
+      echo "$line"
+      echo "$skill_list"
+      in_skills=1
+    elif [[ "$line" == "<!-- SKILLS_END -->" ]]; then
+      echo "$line"
+      in_skills=0
+    elif [[ $in_skills -eq 0 ]]; then
+      echo "$line"
+    fi
+  done < "$README"
 }
 
-# Run
-update_readme
+# Update README
+tmp_file=$(mktemp)
+create_readme > "$tmp_file"
+mv "$tmp_file" "$README"
+
+skill_count=$(ls -1d "$SKILLS_DIR"/*/ 2>/dev/null | wc -l | tr -d ' ')
+echo "✓ Updated README.md with $skill_count skills"
