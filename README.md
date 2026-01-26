@@ -52,6 +52,18 @@ agent-skills/
 └── codex/       # Codex CLI-specific skills
 ```
 
+## Compatibility
+
+**93% of skills work across all platforms** (Clawdbot, Claude Code, Codex).
+
+| Category | Count | Platforms |
+|----------|-------|-----------|
+| Universal | 3 | ✅ All |
+| Portable | 18 | ✅ All (uses read/write/exec) |
+| Clawdbot-only | 2 | Clawdbot only |
+
+See **[COMPATIBILITY.md](./COMPATIBILITY.md)** for the full matrix and installation instructions per platform.
+
 ## Skills
 
 Skills include tooling, templates, scripts, or structured workflows:
