@@ -65,6 +65,7 @@ Skills include tooling, templates, scripts, or structured workflows:
 | `gsc` | Query Google Search Console for SEO data - search queries, top pages, CTR opportunities, URL inspection, and sitemaps. |
 | `jira` | Manage Jira issues, boards, sprints, and projects via the jira-cli. Search, create, update, and transition issues. |
 | `nudocs` | Upload, edit, and export documents via Nudocs.ai for creating shareable document links. |
+| `parallel-task` | Execute plan files by launching multiple parallel subagents to complete tasks simultaneously. Credit: [@am-will](https://github.com/am-will). |
 | `planner` | Create structured plans for multi-task projects. Pairs with task-orchestrator for execution. |
 | `remotion` | Best practices for Remotion video creation in React. Includes extensive rules and reference files. |
 | `sysadmin-toolbox` | Shell one-liner reference and tool discovery for sysadmin, DevOps, and security tasks. |
