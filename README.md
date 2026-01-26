@@ -48,7 +48,8 @@ A collection of AI agent skills and prompts for [Clawdbot](https://github.com/cl
 agent-skills/
 ├── skills/      # Skills with tooling, scripts, or structured workflows
 ├── prompts/     # Pure instruction prompts (guidance text only)
-└── clawdbot/    # Clawdbot-specific skills
+├── clawdbot/    # Clawdbot-specific skills
+└── codex/       # Codex CLI-specific skills
 ```
 
 ## Skills
@@ -57,6 +58,7 @@ Skills include tooling, templates, scripts, or structured workflows:
 
 | Skill | Description |
 |-------|-------------|
+| `context-recovery` | Automatically recover working context after session compaction. Fetches channel history, parses session logs, and synthesizes a structured summary. Works across Discord, Slack, Telegram, and Signal. |
 | `elegant-reports` | Generate beautifully designed PDF reports with Nordic/Scandinavian aesthetic via Nutrient DWS API. Includes templates, themes, and a Node.js generator. |
 | `ga4` | Query Google Analytics 4 (GA4) data via the Analytics Data API. Pull website analytics like top pages, traffic sources, user counts, sessions, conversions, and custom metrics. |
 | `google-ads` | Query, audit, and optimize Google Ads campaigns. Supports API mode for bulk operations or browser automation for users without API access. |
@@ -93,6 +95,18 @@ Skills designed specifically for [Clawdbot](https://github.com/clawdbot/clawdbot
 | `skill-sync` | Sync skills between local installation and shared repositories. |
 | `todo-tracker` | Persistent TODO scratch pad for tracking tasks across sessions. |
 
+## Codex-Specific
+
+Skills designed for [Codex CLI](https://github.com/openai/codex) (OpenAI's coding agent):
+
+| Skill | Description |
+|-------|-------------|
+| `codex` | Run Codex CLI with GPT-5.2. Covers sandbox modes, reasoning levels, resume sessions, and model selection. |
+| `gemini` | Run Gemini CLI for large-context (200k+) code review, plan review, and big context processing. |
+| `command-creator` | Create optimized Codex slash commands with proper structure and best practices. |
+
+> **Note:** Most skills in `/skills/` and `/prompts/` are universal and work with Codex too. The `/codex/` folder contains skills specifically about *operating* Codex CLI.
+
 ---
 
 ## Installation
@@ -115,9 +129,9 @@ Or clone and add the whole repo:
 git clone https://github.com/jdrhyne/agent-skills.git ~/agent-skills
 ```
 
-### With Claude Code / Codex
+### With Claude Code
 
-Copy skills to your project or instructions directory:
+Copy skills to your Claude Code instructions directory:
 
 ```bash
 # Copy a specific skill
@@ -125,6 +139,35 @@ cp -r skills/elegant-reports ~/.claude/skills/
 
 # Or symlink
 ln -s $(pwd)/skills/planner ~/.claude/skills/
+```
+
+### With Codex CLI
+
+Copy skills to your Codex instructions directory:
+
+```bash
+# Copy Codex-specific skills
+cp -r codex/codex ~/.codex/skills/
+cp -r codex/gemini ~/.codex/skills/
+cp -r codex/command-creator ~/.codex/skills/
+
+# Copy universal skills you want
+cp -r skills/jira ~/.codex/skills/
+cp -r prompts/humanizer ~/.codex/skills/
+
+# Or symlink the whole repo for easy updates
+ln -s $(pwd) ~/.codex/agent-skills
+```
+
+Add to your Codex config (`~/.codex/config.toml`):
+
+```toml
+[skills]
+paths = [
+  "~/.codex/skills/codex",
+  "~/.codex/skills/gemini",
+  "~/.codex/skills/jira"
+]
 ```
 
 ### Manual
