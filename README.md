@@ -89,6 +89,7 @@ Skills designed specifically for [Clawdbot](https://github.com/clawdbot/clawdbot
 | `auto-updater` | Automatically update Clawdbot and installed skills daily via cron. |
 | `clawdbot-release-check` | Check for new Clawdbot releases and notify once per version. |
 | `clawddocs` | Clawdbot documentation expert with search, navigation, and config snippets. |
+| `gallery-scraper` | Bulk download images from login-protected gallery websites using browser automation. |
 | `skill-sync` | Sync skills between local installation and shared repositories. |
 | `todo-tracker` | Persistent TODO scratch pad for tracking tasks across sessions. |
 
@@ -188,6 +189,42 @@ prompts/my-prompt/
 
 - `scripts/update-readme.sh` — Auto-generate README from skill metadata
 - `scripts/validate-skills.sh` — Validate SKILL.md format across all skills
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Whether it's a new skill, an improvement, or a bug fix.
+
+### Quick Start
+
+1. Fork the repo
+2. Create your skill in `skills/`, `prompts/`, or `clawdbot/`
+3. Test it with your agent
+4. Submit a PR
+
+### Quality Bar
+
+Good skills share **expert knowledge** — the kind that takes years to learn:
+
+- ✅ Decision trees for non-obvious choices
+- ✅ Trade-offs only experience teaches
+- ✅ "NEVER do X because..." warnings
+- ❌ Don't explain basics the model already knows
+- ❌ Don't write tutorials for standard libraries
+
+**See [CONTRIBUTING.md](CONTRIBUTING.md) for full guidelines.**
+
+### Ideas Welcome
+
+Not sure what to build? Some gaps we'd love filled:
+
+- Integrations (Slack, Linear, Notion API)
+- Framework patterns (Next.js, Remix, SvelteKit)
+- DevOps workflows (Terraform, Kubernetes)
+- Domain expertise (legal, medical, finance)
+
+Open an issue to discuss before building something big!
 
 ---
 
