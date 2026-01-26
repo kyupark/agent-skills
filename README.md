@@ -242,7 +242,7 @@ Contributions are welcome! Whether it's a new skill, an improvement, or a bug fi
 ### Quick Start
 
 1. Fork the repo
-2. Create your skill in `skills/`, `prompts/`, or `clawdbot/`
+2. Create your skill in `skills/`, `prompts/`, `clawdbot/`, or `codex/`
 3. Test it with your agent
 4. Submit a PR
 
