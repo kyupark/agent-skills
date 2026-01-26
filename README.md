@@ -192,6 +192,42 @@ prompts/my-prompt/
 
 ---
 
+## 🤝 Contributing
+
+Contributions are welcome! Whether it's a new skill, an improvement, or a bug fix.
+
+### Quick Start
+
+1. Fork the repo
+2. Create your skill in `skills/`, `prompts/`, or `clawdbot/`
+3. Test it with your agent
+4. Submit a PR
+
+### Quality Bar
+
+Good skills share **expert knowledge** — the kind that takes years to learn:
+
+- ✅ Decision trees for non-obvious choices
+- ✅ Trade-offs only experience teaches
+- ✅ "NEVER do X because..." warnings
+- ❌ Don't explain basics the model already knows
+- ❌ Don't write tutorials for standard libraries
+
+**See [CONTRIBUTING.md](CONTRIBUTING.md) for full guidelines.**
+
+### Ideas Welcome
+
+Not sure what to build? Some gaps we'd love filled:
+
+- Integrations (Slack, Linear, Notion API)
+- Framework patterns (Next.js, Remix, SvelteKit)
+- DevOps workflows (Terraform, Kubernetes)
+- Domain expertise (legal, medical, finance)
+
+Open an issue to discuss before building something big!
+
+---
+
 ## License
 
 MIT — Use these skills however you like.
