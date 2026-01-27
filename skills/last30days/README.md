@@ -101,6 +101,10 @@ python3 scripts/hn_search.py "Cursor" --days 30
 - "Cursor raises $60M Series A" — 342 points, 289 comments
 ```
 
+## Credits
+
+Based on [last30days-skill](https://github.com/mvanhorn/last30days-skill) by [@mvanhorn](https://github.com/mvanhorn).
+
 ## License
 
 MIT
