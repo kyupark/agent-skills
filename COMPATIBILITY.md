@@ -6,7 +6,7 @@ This document shows which skills work with which AI coding platforms.
 
 | Platform | Description |
 |----------|-------------|
-| **Clawdbot** | Full Clawdbot agent with all tools |
+| **Moltbot** | Full Moltbot (formerly Clawdbot) agent with all tools |
 | **Claude Code** | Claude Code CLI with read, write, exec, web_search, web_fetch |
 | **Codex** | OpenAI Codex CLI with similar portable tool set |
 
@@ -26,7 +26,7 @@ These skills are pure instruction/methodology with no tool dependencies:
 | `senior-engineering` | `prompts/senior-engineering` |
 | `web-design-guidelines` | `prompts/web-design-guidelines` |
 
-### ✅ Portable (Claude Code + Codex + Clawdbot)
+### ✅ Portable (Claude Code + Codex + Moltbot)
 
 These skills use only portable tools (`read`, `write`, `exec`, `web_search`, `web_fetch`):
 
@@ -48,32 +48,32 @@ These skills use only portable tools (`read`, `write`, `exec`, `web_search`, `we
 | `codex` | `codex/codex` | `exec` |
 | `command-creator` | `codex/command-creator` | `write` |
 | `gemini` | `codex/gemini` | `exec` |
-| `self-improving-agent` | `clawdbot/self-improving-agent` | `read`, `write` |
-| `skill-sync` | `clawdbot/skill-sync` | `exec` |
-| `todo-tracker` | `clawdbot/todo-tracker` | `exec` |
 | `zendesk` | `skills/zendesk` | `exec` |
 
-### ⚠️ Clawdbot-Only
+### ⚠️ Moltbot-Only (formerly Clawdbot)
 
-These skills require Clawdbot-specific tools:
+These skills require Moltbot-specific tools:
 
 | Skill | Location | Required Tools | Portability Notes |
 |-------|----------|----------------|-------------------|
 | `auto-updater` | `clawdbot/auto-updater` | `cron`, `message` | Needs alternative scheduler |
 | `clawdbot-release-check` | `clawdbot/clawdbot-release-check` | `exec` | Actually portable! |
-| `clawddocs` | `clawdbot/clawddocs` | Clawdbot docs | Clawdbot-specific content |
+| `clawddocs` | `clawdbot/clawddocs` | Moltbot docs | Moltbot-specific content |
 | `gallery-scraper` | `clawdbot/gallery-scraper` | `browser` | Needs browser automation |
+| `self-improving-agent` | `clawdbot/self-improving-agent` | `read`, `write` | Portable tools but Moltbot-oriented |
+| `skill-sync` | `clawdbot/skill-sync` | `exec` | Portable tools but Moltbot-oriented |
+| `todo-tracker` | `clawdbot/todo-tracker` | `exec` | Portable tools but Moltbot-oriented |
 
 ## Tool Categories
 
-**Clawdbot-only tools:**
+**Moltbot-only tools (formerly Clawdbot):**
 - `message` — Send messages, reactions, channel operations
 - `browser` — Browser automation
 - `cron` — Scheduled jobs
 - `nodes` — Device/node control
 - `canvas` — Canvas presentation
 - `sessions_spawn/send` — Multi-agent orchestration
-- `gateway` — Clawdbot config/restart
+- `gateway` — Moltbot config/restart
 - `tts` — Text-to-speech
 - `memory_search/get` — Semantic memory
 
@@ -99,11 +99,11 @@ cp -r agent-skills/codex/* ~/.claude/skills/
 cp -r agent-skills/prompts/* ~/.claude/prompts/
 ```
 
-### Clawdbot
+### Moltbot (formerly Clawdbot)
 
 ```bash
 # Clone to your workspace skills folder
-cd ~/your-clawdbot-workspace/skills
+cd ~/your-moltbot-workspace/skills
 git clone https://github.com/jdrhyne/agent-skills.git
 
 # Or use skill-sync

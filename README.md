@@ -35,13 +35,13 @@
                          ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
         ══════════════════════════════════════════════════════════════════════
-           CLAWDBOT  ●  CLAUDE CODE  ●  CODEX  ●  CURSOR  ●  ANY LLM AGENT
+           MOLTBOT  ●  CLAUDE CODE  ●  CODEX  ●  CURSOR  ●  ANY LLM AGENT
         ══════════════════════════════════════════════════════════════════════
 
                               ©1987 JDRHYNE ENTERTAINMENT
 ```
 
-A collection of AI agent skills and prompts for [Clawdbot](https://github.com/clawdbot/clawdbot), Claude Code, Codex, and other LLM-based coding assistants.
+A collection of AI agent skills and prompts for [Moltbot](https://github.com/clawdbot/clawdbot) (formerly Clawdbot), Claude Code, Codex, and other LLM-based coding assistants.
 
 > **🤝 Contributions Welcome!** Have a skill that makes your AI agent smarter? We'd love to include it. [See how to contribute](#-contributing) or just open a PR.
 
@@ -51,19 +51,19 @@ A collection of AI agent skills and prompts for [Clawdbot](https://github.com/cl
 agent-skills/
 ├── skills/      # Skills with tooling, scripts, or structured workflows
 ├── prompts/     # Pure instruction prompts (guidance text only)
-├── clawdbot/    # Clawdbot-specific skills
+├── clawdbot/    # Moltbot (formerly Clawdbot) specific skills
 └── codex/       # Codex CLI-specific skills
 ```
 
 ## Compatibility
 
-**88% of skills work across all platforms** (Clawdbot, Claude Code, Codex).
+**79% of skills work across all platforms** (Moltbot (formerly Clawdbot), Claude Code, Codex).
 
 | Category | Count | Platforms |
 |----------|-------|-----------|
 | Universal | 7 | ✅ All |
-| Portable | 22 | ✅ All (uses read/write/exec) |
-| Clawdbot-only | 4 | Clawdbot only |
+| Portable | 19 | ✅ All (uses read/write/exec) |
+| Moltbot-only | 7 | Moltbot only |
 
 See **[COMPATIBILITY.md](./COMPATIBILITY.md)** for the full matrix and installation instructions per platform.
 
@@ -102,15 +102,15 @@ Pure instruction prompts — guidance text that works with any AI agent:
 | [`senior-engineering`](prompts/senior-engineering/) | Engineering principles for building software like a senior engineer. Best practices for architecture, code quality, and decision-making. |
 | [`web-design-guidelines`](prompts/web-design-guidelines/) | Review UI code for Web Interface Guidelines compliance. Accessibility, UX patterns, and design system adherence. |
 
-## Clawdbot-Specific
+## Moltbot-Specific (formerly Clawdbot)
 
-Skills designed specifically for [Clawdbot](https://github.com/clawdbot/clawdbot):
+Skills designed specifically for [Moltbot](https://github.com/clawdbot/clawdbot) (formerly Clawdbot):
 
 | Skill | Description |
 |-------|-------------|
-| [`auto-updater`](clawdbot/auto-updater/) | Automatically update Clawdbot and installed skills daily via cron. |
-| [`clawdbot-release-check`](clawdbot/clawdbot-release-check/) | Check for new Clawdbot releases and notify once per version. |
-| [`clawddocs`](clawdbot/clawddocs/) | Clawdbot documentation expert with search, navigation, and config snippets. |
+| [`auto-updater`](clawdbot/auto-updater/) | Automatically update Moltbot and installed skills daily via cron. |
+| [`clawdbot-release-check`](clawdbot/clawdbot-release-check/) | Check for new Moltbot releases and notify once per version. |
+| [`clawddocs`](clawdbot/clawddocs/) | Moltbot documentation expert with search, navigation, and config snippets. |
 | [`gallery-scraper`](clawdbot/gallery-scraper/) | Bulk download images from authenticated gallery websites via browser relay. |
 | [`knowledge-graph`](clawdbot/knowledge-graph/) | Three-Layer Memory System with automatic fact extraction, entity-based knowledge graph, and weekly synthesis. |
 | [`self-improving-agent`](clawdbot/self-improving-agent/) | Captures errors/lessons and logs learnings for continuous improvement. |
@@ -133,9 +133,9 @@ Skills designed for [Codex CLI](https://github.com/openai/codex) (OpenAI's codin
 
 ## Installation
 
-### With Clawdbot
+### With Moltbot (formerly Clawdbot)
 
-Add skill paths to your Clawdbot config:
+Add skill paths to your Moltbot config:
 
 ```yaml
 skills:
