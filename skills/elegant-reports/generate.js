@@ -302,8 +302,10 @@ async function generateReport(options) {
   };
   
   // Determine template and theme
-  const templateName = meta.template || template;
-  const themeName = meta.theme || theme;
+  // Priority: CLI option > frontmatter > default
+  // Note: CLI args are passed explicitly, so they should override frontmatter
+  const templateName = template || meta.template || 'report';
+  const themeName = theme || meta.theme || 'light';
   
   // Load and populate template
   const { template: tpl, styles } = loadTemplate(templateName, themeName);
