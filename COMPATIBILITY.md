@@ -21,6 +21,10 @@ These skills are pure instruction/methodology with no tool dependencies:
 | `planner` | `skills/planner` |
 | `remotion` | `skills/remotion` |
 | `frontend-design` | `prompts/frontend-design` |
+| `humanizer` | `prompts/humanizer` |
+| `munger-observer` | `prompts/munger-observer` |
+| `senior-engineering` | `prompts/senior-engineering` |
+| `web-design-guidelines` | `prompts/web-design-guidelines` |
 
 ### ✅ Portable (Claude Code + Codex + Clawdbot)
 
@@ -33,8 +37,11 @@ These skills use only portable tools (`read`, `write`, `exec`, `web_search`, `we
 | `ga4` | `skills/ga4` | `exec` |
 | `google-ads` | `skills/google-ads` | `exec`, `browser` |
 | `gsc` | `skills/gsc` | `exec` |
+| `gong` | `skills/gong` | `exec` |
 | `jira` | `skills/jira` | `exec` |
+| `last30days` | `skills/last30days` | `exec` |
 | `nudocs` | `skills/nudocs` | `exec` |
+| `salesforce` | `skills/salesforce` | `exec` |
 | `parallel-task` | `skills/parallel-task` | `exec` |
 | `sysadmin-toolbox` | `skills/sysadmin-toolbox` | `exec`, `read` |
 | `task-orchestrator` | `skills/task-orchestrator` | `sessions_spawn` OR `exec` (has fallback) |
@@ -44,6 +51,7 @@ These skills use only portable tools (`read`, `write`, `exec`, `web_search`, `we
 | `self-improving-agent` | `clawdbot/self-improving-agent` | `read`, `write` |
 | `skill-sync` | `clawdbot/skill-sync` | `exec` |
 | `todo-tracker` | `clawdbot/todo-tracker` | `exec` |
+| `zendesk` | `skills/zendesk` | `exec` |
 
 ### ⚠️ Clawdbot-Only
 
@@ -117,4 +125,4 @@ Some skills require external tools to be installed:
 
 ---
 
-*Generated: 2025-01-26*
+*Generated: 2026-01-27*
