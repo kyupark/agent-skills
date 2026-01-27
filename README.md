@@ -51,13 +51,13 @@ A collection of AI agent skills and prompts for [Moltbot](https://github.com/cla
 agent-skills/
 ├── skills/      # Skills with tooling, scripts, or structured workflows
 ├── prompts/     # Pure instruction prompts (guidance text only)
-├── clawdbot/    # Moltbot (formerly Clawdbot) specific skills
+├── clawdbot/    # Moltbot-specific skills
 └── codex/       # Codex CLI-specific skills
 ```
 
 ## Compatibility
 
-**79% of skills work across all platforms** (Moltbot (formerly Clawdbot), Claude Code, Codex).
+**79% of skills work across all platforms** (Moltbot, Claude Code, Codex).
 
 | Category | Count | Platforms |
 |----------|-------|-----------|
@@ -104,7 +104,7 @@ Pure instruction prompts — guidance text that works with any AI agent:
 
 ## Moltbot-Specific (formerly Clawdbot)
 
-Skills designed specifically for [Moltbot](https://github.com/clawdbot/clawdbot) (formerly Clawdbot):
+Skills designed specifically for [Moltbot](https://github.com/clawdbot/clawdbot):
 
 | Skill | Description |
 |-------|-------------|
@@ -133,7 +133,7 @@ Skills designed for [Codex CLI](https://github.com/openai/codex) (OpenAI's codin
 
 ## Installation
 
-### With Moltbot (formerly Clawdbot)
+### With Moltbot
 
 Add skill paths to your Moltbot config:
 
@@ -295,7 +295,7 @@ Open an issue to discuss before building something big!
 
 ## 🦞 Lobster Workflows
 
-Looking for deterministic, repeatable automation pipelines? Check out [**lobster-workflows**](https://github.com/jdrhyne/lobster-workflows) — a companion repo of ready-to-use [Lobster](https://github.com/clawdbot/lobster) workflow templates for Clawdbot.
+Looking for deterministic, repeatable automation pipelines? Check out [**lobster-workflows**](https://github.com/jdrhyne/lobster-workflows) — a companion repo of ready-to-use [Lobster](https://github.com/clawdbot/lobster) workflow templates for Moltbot.
 
 Lobster replaces freeform LLM orchestration with typed pipelines, approval gates, and state tracking. The repo includes workflows for content publishing, PR monitoring, release announcements, multi-agent coordination, and knowledge extraction.
 
