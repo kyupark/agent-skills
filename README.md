@@ -75,16 +75,19 @@ Skills include tooling, templates, scripts, or structured workflows:
 | `context-recovery` | Automatically recover working context after session compaction. Fetches channel history, parses session logs, and synthesizes a structured summary. Works across Discord, Slack, Telegram, and Signal. |
 | `elegant-reports` | Generate beautifully designed PDF reports with Nordic/Scandinavian aesthetic via Nutrient DWS API. Includes templates, themes, and a Node.js generator. |
 | `ga4` | Query Google Analytics 4 (GA4) data via the Analytics Data API. Pull website analytics like top pages, traffic sources, user counts, sessions, conversions, and custom metrics. |
+| `gong` | Gong API for searching calls, transcripts, and conversation intelligence. Supports listing calls, fetching transcripts, user management, and activity stats. |
 | `google-ads` | Query, audit, and optimize Google Ads campaigns. Supports API mode for bulk operations or browser automation for users without API access. |
 | `gsc` | Query Google Search Console for SEO data - search queries, top pages, CTR opportunities, URL inspection, and sitemaps. |
 | `jira` | Manage Jira issues, boards, sprints, and projects via the jira-cli. Search, create, update, and transition issues. |
 | `last30days` | Research what the internet is saying about any topic over the last 30 days. Searches Hacker News, Stack Overflow, Dev.to, Lobsters, and optionally Reddit and X. |
+| `salesforce` | Query and manage Salesforce orgs via the official Salesforce MCP server or SF CLI. |
 | `nudocs` | Upload, edit, and export documents via Nudocs.ai for creating shareable document links. |
 | `parallel-task` | Execute plan files by launching multiple parallel subagents to complete tasks simultaneously. Credit: [@am-will](https://github.com/am-will). |
 | `planner` | Create structured plans for multi-task projects. Pairs with task-orchestrator for execution. |
 | `remotion` | Best practices for Remotion video creation in React. Includes extensive rules and reference files. |
 | `sysadmin-toolbox` | Shell one-liner reference and tool discovery for sysadmin, DevOps, and security tasks. |
 | `task-orchestrator` | Autonomous multi-agent task orchestration with dependency analysis and parallel execution. |
+| `zendesk` | Zendesk Support API for searching tickets, organizations, and users. Correlate support data with Salesforce accounts. |
 
 ## Prompts
 
