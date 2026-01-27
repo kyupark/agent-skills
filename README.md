@@ -20,6 +20,7 @@
                  ╱  ▲▲  ╲  │  ◄► JIRA  ◄► GA4  ◄► GOOGLE ADS ◄►  │  ╱  ▲▲  ╲
                 ╱  ▲▲▲▲  ╲ │  ◄► GSC  ◄► REMOTION  ◄► PLANNER ◄► │ ╱  ▲▲▲▲  ╲
                ╱   ▲▲▲▲   ╲│  ◄► ORCHESTRATOR  ◄► SYSADMIN  ◄►   │╱   ▲▲▲▲   ╲
+              ╱            ╲│  ◄► KNOWLEDGE-GRAPH  ◄►              │╱            ╲
               ╱════════════╲─────────────────────────────────────╱════════════╲
              ╱  ░░░░░░░░░░  ╲                                    ╱  ░░░░░░░░░░  ╲
             ╱  ░░░░░░░░░░░░  ╲                                  ╱  ░░░░░░░░░░░░  ╲
@@ -111,6 +112,7 @@ Skills designed specifically for [Clawdbot](https://github.com/clawdbot/clawdbot
 | [`clawdbot-release-check`](clawdbot/clawdbot-release-check/) | Check for new Clawdbot releases and notify once per version. |
 | [`clawddocs`](clawdbot/clawddocs/) | Clawdbot documentation expert with search, navigation, and config snippets. |
 | [`gallery-scraper`](clawdbot/gallery-scraper/) | Bulk download images from authenticated gallery websites via browser relay. |
+| [`knowledge-graph`](clawdbot/knowledge-graph/) | Three-Layer Memory System with automatic fact extraction, entity-based knowledge graph, and weekly synthesis. |
 | [`self-improving-agent`](clawdbot/self-improving-agent/) | Captures errors/lessons and logs learnings for continuous improvement. |
 | [`skill-sync`](clawdbot/skill-sync/) | Sync skills between local installation and shared repositories. |
 | [`todo-tracker`](clawdbot/todo-tracker/) | Persistent TODO scratch pad for tracking tasks across sessions. |
