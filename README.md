@@ -20,6 +20,7 @@
                  ╱  ▲▲  ╲  │  ◄► JIRA  ◄► GA4  ◄► GOOGLE ADS ◄►  │  ╱  ▲▲  ╲
                 ╱  ▲▲▲▲  ╲ │  ◄► GSC  ◄► REMOTION  ◄► PLANNER ◄► │ ╱  ▲▲▲▲  ╲
                ╱   ▲▲▲▲   ╲│  ◄► ORCHESTRATOR  ◄► SYSADMIN  ◄►   │╱   ▲▲▲▲   ╲
+              ╱            ╲│  ◄► KNOWLEDGE-GRAPH  ◄►              │╱            ╲
               ╱════════════╲─────────────────────────────────────╱════════════╲
              ╱  ░░░░░░░░░░  ╲                                    ╱  ░░░░░░░░░░  ╲
             ╱  ░░░░░░░░░░░░  ╲                                  ╱  ░░░░░░░░░░░░  ╲
@@ -92,6 +93,7 @@ Skills designed specifically for [Clawdbot](https://github.com/clawdbot/clawdbot
 | `clawdbot-release-check` | Check for new Clawdbot releases and notify once per version. |
 | `clawddocs` | Clawdbot documentation expert with search, navigation, and config snippets. |
 | `gallery-scraper` | Bulk download images from authenticated gallery websites via browser relay. |
+| `knowledge-graph` | Three-Layer Memory System with automatic fact extraction, entity-based knowledge graph, and weekly synthesis. |
 | `skill-sync` | Sync skills between local installation and shared repositories. |
 | `todo-tracker` | Persistent TODO scratch pad for tracking tasks across sessions. |
 
