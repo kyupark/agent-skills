@@ -1,0 +1,83 @@
+{
+  "name": "agent-skills",
+  "display_name": "Agent Skills Collection",
+  "description": "A collection of AI agent skills and prompts for Claude Code, Moltbot, Codex, and other LLM-based coding assistants. Includes integrations for Jira, GA4, Google Ads, GSC, Gong, Salesforce, Zendesk, and more.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Jonathan Rhyne",
+    "github": "jdrhyne"
+  },
+  "repository": "https://github.com/kyupark/agent-skills",
+  "license": "MIT",
+  "categories": [
+    "productivity",
+    "integrations",
+    "automation",
+    "developer-tools"
+  ],
+  "keywords": [
+    "skills",
+    "prompts",
+    "jira",
+    "ga4",
+    "google-ads",
+    "gsc",
+    "salesforce",
+    "zendesk",
+    "gong",
+    "remotion",
+    "planner",
+    "task-orchestrator",
+    "sysadmin",
+    "knowledge-graph"
+  ],
+  "compatibility": {
+    "platforms": ["claude-code", "moltbot", "codex", "cursor"],
+    "universal_skills_percentage": 79
+  },
+  "skills": {
+    "universal": [
+      "context-recovery",
+      "elegant-reports",
+      "frontend-design",
+      "ga4",
+      "gong",
+      "google-ads",
+      "gsc",
+      "humanizer",
+      "jira",
+      "last30days",
+      "munger-observer",
+      "nudocs",
+      "parallel-task",
+      "planner",
+      "remotion",
+      "salesforce",
+      "senior-engineering",
+      "sysadmin-toolbox",
+      "task-orchestrator",
+      "web-design-guidelines",
+      "zendesk"
+    ],
+    "moltbot_specific": [
+      "auto-updater",
+      "clawdbot-release-check",
+      "clawddocs",
+      "gallery-scraper",
+      "knowledge-graph",
+      "self-improving-agent",
+      "skill-sync",
+      "todo-tracker"
+    ],
+    "codex_specific": [
+      "codex",
+      "gemini",
+      "command-creator"
+    ]
+  },
+  "installation": {
+    "claude_code": "cp -r skills/* ~/.claude/skills/ && cp -r prompts/* ~/.claude/skills/",
+    "moltbot": "Add skill paths to your Moltbot config under skills.paths",
+    "codex": "cp -r codex/* ~/.codex/skills/ && cp -r skills/* ~/.codex/skills/"
+  }
+}
