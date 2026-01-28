@@ -1,8 +1,8 @@
 {
   "name": "agent-skills",
   "owner": {
-    "name": "Jonathan Rhyne",
-    "url": "https://github.com/jdrhyne"
+    "name": "Kyu Park",
+    "url": "https://github.com/kyupark"
   },
   "metadata": {
     "description": "AI agent skills and prompts for Claude Code, Moltbot, Codex — Jira, GA4, Google Ads, GSC, Salesforce, Zendesk, and more",
