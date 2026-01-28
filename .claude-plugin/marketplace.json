@@ -1,83 +1,138 @@
 {
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "agent-skills",
-  "display_name": "Agent Skills Collection",
-  "description": "A collection of AI agent skills and prompts for Claude Code, Moltbot, Codex, and other LLM-based coding assistants. Includes integrations for Jira, GA4, Google Ads, GSC, Gong, Salesforce, Zendesk, and more.",
   "version": "1.0.0",
-  "author": {
+  "description": "A collection of AI agent skills and prompts for Claude Code, Moltbot, Codex, and other LLM-based coding assistants",
+  "owner": {
     "name": "Jonathan Rhyne",
-    "github": "jdrhyne"
+    "email": "jdrhyne@users.noreply.github.com"
   },
-  "repository": "https://github.com/kyupark/agent-skills",
-  "license": "MIT",
-  "categories": [
-    "productivity",
-    "integrations",
-    "automation",
-    "developer-tools"
-  ],
-  "keywords": [
-    "skills",
-    "prompts",
-    "jira",
-    "ga4",
-    "google-ads",
-    "gsc",
-    "salesforce",
-    "zendesk",
-    "gong",
-    "remotion",
-    "planner",
-    "task-orchestrator",
-    "sysadmin",
-    "knowledge-graph"
-  ],
-  "compatibility": {
-    "platforms": ["claude-code", "moltbot", "codex", "cursor"],
-    "universal_skills_percentage": 79
-  },
-  "skills": {
-    "universal": [
-      "context-recovery",
-      "elegant-reports",
-      "frontend-design",
-      "ga4",
-      "gong",
-      "google-ads",
-      "gsc",
-      "humanizer",
-      "jira",
-      "last30days",
-      "munger-observer",
-      "nudocs",
-      "parallel-task",
-      "planner",
-      "remotion",
-      "salesforce",
-      "senior-engineering",
-      "sysadmin-toolbox",
-      "task-orchestrator",
-      "web-design-guidelines",
-      "zendesk"
-    ],
-    "moltbot_specific": [
-      "auto-updater",
-      "clawdbot-release-check",
-      "clawddocs",
-      "gallery-scraper",
-      "knowledge-graph",
-      "self-improving-agent",
-      "skill-sync",
-      "todo-tracker"
-    ],
-    "codex_specific": [
-      "codex",
-      "gemini",
-      "command-creator"
-    ]
-  },
-  "installation": {
-    "claude_code": "cp -r skills/* ~/.claude/skills/ && cp -r prompts/* ~/.claude/skills/",
-    "moltbot": "Add skill paths to your Moltbot config under skills.paths",
-    "codex": "cp -r codex/* ~/.codex/skills/ && cp -r skills/* ~/.codex/skills/"
-  }
+  "plugins": [
+    {
+      "name": "context-recovery",
+      "description": "Automatically recover working context after session compaction. Fetches channel history, parses session logs, and synthesizes a structured summary.",
+      "source": "./skills/context-recovery",
+      "category": "productivity"
+    },
+    {
+      "name": "elegant-reports",
+      "description": "Generate beautifully designed PDF reports with Nordic/Scandinavian aesthetic via Nutrient DWS API. Includes templates, themes, and a Node.js generator.",
+      "source": "./skills/elegant-reports",
+      "category": "productivity"
+    },
+    {
+      "name": "ga4",
+      "description": "Query Google Analytics 4 data via the Analytics Data API. Pull website analytics like top pages, traffic sources, user counts, sessions, and conversions.",
+      "source": "./skills/ga4",
+      "category": "productivity"
+    },
+    {
+      "name": "gong",
+      "description": "Gong API for searching calls, transcripts, and conversation intelligence. Supports listing calls, fetching transcripts, user management, and activity stats.",
+      "source": "./skills/gong",
+      "category": "productivity"
+    },
+    {
+      "name": "google-ads",
+      "description": "Query, audit, and optimize Google Ads campaigns. Supports API mode for bulk operations or browser automation for users without API access.",
+      "source": "./skills/google-ads",
+      "category": "productivity"
+    },
+    {
+      "name": "gsc",
+      "description": "Query Google Search Console for SEO data - search queries, top pages, CTR opportunities, URL inspection, and sitemaps.",
+      "source": "./skills/gsc",
+      "category": "productivity"
+    },
+    {
+      "name": "jira",
+      "description": "Manage Jira issues, boards, sprints, and projects via the jira-cli. Search, create, update, and transition issues.",
+      "source": "./skills/jira",
+      "category": "productivity"
+    },
+    {
+      "name": "last30days",
+      "description": "Research what the internet is saying about any topic over the last 30 days. Searches Hacker News, Stack Overflow, Dev.to, Lobsters, and optionally Reddit and X.",
+      "source": "./skills/last30days",
+      "category": "productivity"
+    },
+    {
+      "name": "salesforce",
+      "description": "Query and manage Salesforce orgs via the official Salesforce MCP server or SF CLI.",
+      "source": "./skills/salesforce",
+      "category": "productivity"
+    },
+    {
+      "name": "nudocs",
+      "description": "Upload, edit, and export documents via Nudocs.ai for creating shareable document links.",
+      "source": "./skills/nudocs",
+      "category": "productivity"
+    },
+    {
+      "name": "parallel-task",
+      "description": "Execute plan files by launching multiple parallel subagents to complete tasks simultaneously.",
+      "source": "./skills/parallel-task",
+      "category": "development"
+    },
+    {
+      "name": "planner",
+      "description": "Create structured plans for multi-task projects. Pairs with task-orchestrator for execution.",
+      "source": "./skills/planner",
+      "category": "development"
+    },
+    {
+      "name": "remotion",
+      "description": "Best practices for Remotion video creation in React. Includes extensive rules and reference files.",
+      "source": "./skills/remotion",
+      "category": "development"
+    },
+    {
+      "name": "sysadmin-toolbox",
+      "description": "Shell one-liner reference and tool discovery for sysadmin, DevOps, and security tasks.",
+      "source": "./skills/sysadmin-toolbox",
+      "category": "development"
+    },
+    {
+      "name": "task-orchestrator",
+      "description": "Autonomous multi-agent task orchestration with dependency analysis and parallel execution.",
+      "source": "./skills/task-orchestrator",
+      "category": "development"
+    },
+    {
+      "name": "zendesk",
+      "description": "Zendesk Support API for searching tickets, organizations, and users. Correlate support data with Salesforce accounts.",
+      "source": "./skills/zendesk",
+      "category": "productivity"
+    },
+    {
+      "name": "frontend-design",
+      "description": "Expert frontend design guidelines for creating beautiful, modern UIs. Covers layout, typography, color, and component patterns.",
+      "source": "./prompts/frontend-design",
+      "category": "development"
+    },
+    {
+      "name": "humanizer",
+      "description": "Remove signs of AI-generated writing from text. Makes content sound more natural and human-written.",
+      "source": "./prompts/humanizer",
+      "category": "productivity"
+    },
+    {
+      "name": "munger-observer",
+      "description": "Daily wisdom review applying Charlie Munger's mental models to your work and thinking.",
+      "source": "./prompts/munger-observer",
+      "category": "learning"
+    },
+    {
+      "name": "senior-engineering",
+      "description": "Engineering principles for building software like a senior engineer. Best practices for architecture, code quality, and decision-making.",
+      "source": "./prompts/senior-engineering",
+      "category": "development"
+    },
+    {
+      "name": "web-design-guidelines",
+      "description": "Review UI code for Web Interface Guidelines compliance. Accessibility, UX patterns, and design system adherence.",
+      "source": "./prompts/web-design-guidelines",
+      "category": "development"
+    }
+  ]
 }
